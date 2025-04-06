@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symptom Checker</title>
+    <link rel="stylesheet" href="symptom_checker.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="product-name">
+            <h1>Medisana</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('drugDataSection')">Drugs & Supplements</a></li>
+                <li><a href="#" onclick="showSection('pharmacySection')">Nearby Pharmacy</a></li>
+                <li><a href="#" onclick="showSection('symptomCheckerSection')">Symptom Checker</a></li>
+                <li><a href="#" onclick="showSection('findDoctorSection')">Find a Doctor</a></li>
+                <li><a href="#">MEDISCAN</a></li>
+            </ul>
+        </nav>
+    
+        <div class="notification-icon" id="notificationIcon">
+            <i class="fa-solid fa-bell"></i>
+            <span class="notification-count" id="notificationCount">0</span>
+        </div>
+        <div class="settings-icon" id="settingsIcon">
+            <i class="fa-solid fa-gear"></i>
+        </div>
+        <div class="logout-icon" id="logoutIcon">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </div>
+        <div class="user-profile" id="userProfile">
+            <img src="LOGO.jpg" alt="User Profile">
+            <p>Kartik</p>
+        </div>
+        <div class="logout-animation" id="logoutAnimation">
+            <div class="rolling-circle"></div>
+        </div>
+    </header>
+    
+    <main>
+        <section id="symptomCheckerSection" class="symptom-checker">
+            <div class="form-container">
+                <h1>Symptom Checker</h1>
+                <p>Identify possible conditions and treatment related to your symptoms.</p>
+                <p>This tool does not provide medical advice. See additional information.</p>
+                <form id="symptomForm">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" placeholder="Enter your age">
+                    <label for="sex">Sex</label>
+                    <select id="sex" name="sex">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    <button type="button" onclick="showBodyParts()">Continue</button>
+                </form>
+            </div>
+            <div class="body-parts-container" id="bodyPartsSection" style="display: none;">
+                <h2>Select Body Part</h2>
+                <div class="body-parts-grid">
+                    <button onclick="showSymptoms('head')">Head</button>
+                    <button onclick="showSymptoms('chest')">Chest</button>
+                    <button onclick="showSymptoms('abdomen')">Abdomen</button>
+                    <button onclick="showSymptoms('arms')">Arms</button>
+                    <button onclick="showSymptoms('legs')">Legs</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="symptomsSection" class="symptoms-section" style="display: none;">
+            <h2 id="bodyPartTitle">Symptoms for <span id="selectedBodyPart"></span></h2>
+            <ul id="symptomsList">
+                <!-- Symptoms will be dynamically added here -->
+            </ul>
+            <button onclick="checkSymptoms()">Check Symptoms</button>
+        </section>
+
+        <section id="resultsSection" class="results-section" style="display: none;">
+            <h2>Possible Conditions</h2>
+            <ul id="resultsList">
+                <!-- Results will be dynamically added here -->
+            </ul>
+            <canvas id="diseaseChart"></canvas>
+        </section>
+<section id="pharmacySection" class="pharmacy-section" style="display: none;">
+    <h2>Find Your Pharmacy</h2>
+    <div class="location-selector">
+        <label for="pharmacyState">Select State:</label>
+        <select id="pharmacyState" onchange="showPharmacyCities()">
+            <option value="">Select a state</option>
+            <option value="delhi">Delhi</option>
+            <option value="haryana">Haryana</option>
+            <option value="uttarakhand">Uttarakhand</option>
+            <option value="punjab">Punjab</option>
+            <option value="uttarpradesh">Uttar Pradesh</option>
+        </select>
+    </div>
+    <div id="pharmacyCitySelector" style="display: none;">
+        <label for="pharmacyCity">Select City:</label>
+        <select id="pharmacyCity" onchange="showPharmacies()">
+            <!-- City options will be dynamically added here -->
+        </select>
+    </div>
+    <div class="pharmacy-list" id="pharmacyList">
+        <!-- Pharmacy entries will be dynamically added here -->
+    </div>
+</section>
+
+        <section id="findDoctorSection" class="find-doctor-section" style="display: none;">
+            <div class="location-selector">
+                <h2>Find Your Doctor</h2>
+                <div class="circle">
+                    <i class="fa-solid fa-user-doctor" style="transform: scale(2);"></i>
+                </div>
+                <p>Enter your location to find a doctor near you.</p>
+                <div id="locationSelector">
+                    <label for="state">Select State:</label>
+                    <select id="state" onchange="showCities()">
+                        <option value="">Select a state</option>
+                        <option value="delhi">Delhi</option>
+                        <option value="haryana">Haryana</option>
+                        <option value="uttarakhand">Uttarakhand</option>
+                        <option value="punjab">Punjab</option>
+                        <option value="uttarpradesh">Uttar Pradesh</option>
+                    </select>
+                </div>
+                <div id="citySelector" style="display: none;">
+                    <label for="city">Select City:</label>
+                    <select id="city" onchange="showDoctors()">
+                        <!-- City options will be dynamically added here -->
+                    </select>
+                </div>
+            </div>
+            <div class="doctor-list" id="doctorList">
+                <!-- Doctor entries will be dynamically added here -->
+            </div>
+        </section>
+
+        <section id="drugDataSection" class="drug-data-section" style="display: none;">
+            <h1>Open FDA Drug Data</h1>
+            <button id="fetchDataBtn">Fetch Drug Data</button>
+            <main>
+                <div id="alphabet-nav"></div>
+                <table id="drugTable">
+                    <thead>
+                        <tr>
+                            <th>DRUG NAME</th>
+                            <th>Manufacturer</th>
+                            <th>COMPOSITION</th>
+                            <th>USED FOR </th>
+                            <th>REPORT DATA</th>
+                            <th>DETAILS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data will be populated here -->
+                    </tbody>
+                </table>
+            </main>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Medicina. All rights reserved.</p>
+            <p><a href="#">Privacy Policy</a> <a href="#">Terms of Service</a></p>
+            <p>Developed by <a href="#">Medicina</a></p>
+            <p><a href="#">Contact Us</a></p>
+        </div>
+        <div class="footer-logo">
+            <img src="LOGO.jpg" alt="Medicina Logo" height="100" width="100">
+        </div>
+        <div class="footer-icons">
+            <a href="#" aria-label="LinkedIn" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="#" aria-label="GitHub" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="#" aria-label="Twitter" class="social-icon"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script src="symptom_checker.js"></script>
+</body>
+</html>
+<!-- Compare this snippet from login_page/symptom_checker.js: -->
+<!--  // symptom_checker.js
+// JavaScript code for the Symptom Checker and Find a Doctor sections   
+ -->

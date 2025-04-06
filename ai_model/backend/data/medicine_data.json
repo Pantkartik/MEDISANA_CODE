@@ -1,0 +1,37 @@
+[
+    {
+        "medicine": "ABCIXIMAB",
+        "dosage": "1",
+        "frequency": "Morning 8 Days"
+    },
+    {
+        "medicine": "TAB. VOMILAST",
+        "dosage": "1",
+        "frequency": "Morning"
+    },
+    {
+        "medicine": "Night",
+        "dosage": "8",
+        "frequency": "Days"
+    },
+    {
+        "medicine": "PYRIDOXINE",
+        "dosage": "10",
+        "frequency": "MG"
+    },
+    {
+        "medicine": "CAP. ZOCLAR",
+        "dosage": "500",
+        "frequency": "1 Morning 3 Days"
+    },
+    {
+        "medicine": "SR.",
+        "dosage": "1",
+        "frequency": "Night 4 Days"
+    },
+    {
+        "medicine": "ISOXSUPRINE",
+        "dosage": "10",
+        "frequency": "MG\n\nAdvice"
+    }
+]

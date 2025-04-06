@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <nav id="navigation">
+        <a href="#" class="logo">MEDISANA<span>R</span></a>
+        <ul class="links">
+            <li><a href="#product">Product</a></li>
+            <li><a href="#vision">Vision</a></li>
+            <li><a href="#team">Team</a></li>
+            <li class="dropdown">
+                <a href="#" class="trigger-drop">Contact<i class="arrow"></i></a>
+                <ul class="drop">
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Phone</a></li>
+                </ul>
+            </li>
+            <button class="modal-button">LOGIN</button>
+        </ul>
+    </nav>
+    <div class="parallax-wrapper">
+        <div class="hero parallax-content">
+            <img src="hero.jpg" alt="Hero image MEDISANA">
+        </div>
+        <div class="main-content">
+            <div class="scroll-icon-container">
+                <svg class="icon--down-arrow" viewBox="0 0 24 24">
+                    <path d="M11,4H13V16L18.5,10.5L19.92,11.92L12,19.84L4.08,11.92L5.5,10.5L11,16V4Z"></path>
+                </svg>
+            </div>
+            <div class="modal">
+                <div class="modal-container">
+                    <div class="modal-left">
+                        <h1 class="modal-title">Namaste!</h1>
+                        <p class="modal-desc">Medisana apka sathi.</p>
+                        <div class="input-block">
+                            <label for="email" class="input-label">Email</label>
+                            <input type="email" name="email" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="input-block">
+                            <label for="password" class="input-label">Password</label>
+                            <input type="password" name="password" id="password" placeholder="Enter your password">
+                        </div>
+                        <div class="modal-buttons">
+                            <a href="" class="">Forgot your password?</a>
+                            <button class="input-button">Login</button>
+                        </div>
+                        <p class="sign-up">Don't have an account? <a href="#">Sign up now</a></p>
+                    </div>
+                    <div class="modal-right">
+                        <img src="login.jpg" alt="login">
+                    </div>
+                    <button class="icon-button close-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+                            <path d="M 25 3 C 12.86158 3 3 12.86158 3 25 C 3 37.13842 12.86158 47 25 47 C 37.13842 47 47 37.13842 47 25 C 47 12.86158 37.13842 3 25 3 z M 25 5 C 36.05754 5 45 13.94246 45 25 C 45 36.05754 36.05754 45 25 45 C 13.94246 45 5 36.05754 5 25 C 5 13.94246 13.94246 5 25 5 z M 16.990234 15.990234 A 1.0001 1.0001 0 0 0 16.292969 17.707031 L 23.585938 25 L 16.292969 32.292969 A 1.0001 1.0001 0 1 0 17.707031 33.707031 L 25 26.414062 L 32.292969 33.707031 A 1.0001 1.0001 0 1 0 33.707031 32.292969 L 26.414062 25 L 33.707031 17.707031 A 1.0001 1.0001 0 0 0 32.980469 15.990234 A 1.0001 1.0001 0 0 0 32.292969 16.292969 L 25 23.585938 L 17.707031 16.292969 A 1.0001 1.0001 0 0 0 16.990234 15.990234 z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="product">
+            <h2>Our Product</h2>
+            <h3 style="
+            font-size: 70px;
+            color: var(--website-color);
+            font-weight: 700;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            transition: color 0.3s, text-shadow 0.3s;
+            cursor: pointer;"
+            onmouseover="this.style.color='var(--secondary-color)'; this.style.textShadow='2px 2px 4px rgba(0, 0, 0, 0.3)';"
+            onmouseout="this.style.color='var(--website-color)'; this.style.textShadow='1px 1px 2px rgba(0, 0, 0, 0.2)';"
+          >
+            Medisana
+          </h3>
+          <p style="
+            font-size: calc(1rem + 0.5vmin);
+            color: #666;
+            line-height: 1.6;
+            text-align: center;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 10px;
+            border-radius: 8px;
+            background: rgba(202, 245, 234, 0.8);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background 0.3s, box-shadow 0.3s;
+            cursor: pointer;"
+            onmouseover="this.style.background='rgba(255, 255, 255, 0.9)'; this.style.boxShadow='0 6px 12px rgba(0, 0, 0, 0.2)';"
+            onmouseout="this.style.background='rgba(255, 255, 255, 0.8)'; this.style.boxShadow='0 4px 8px rgba(0, 0, 0, 0.1)';"
+          >
+            Medisana is a medicare website designed to solve healthcare problems, offering a range of features to manage your health effectively.
+          </p>
+          <p>Medisana is an AI powered healthcare assistant that helps users to simplify everyday treatment management by empowering them to take full control of their health plans effortlessly.</p>
+
+            <div class="grid">
+                <div class="card">
+                    <span class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C7.03 2 3 6.03 3 11c0 4.97 4.03 9 9 9s9-4.03 9-9c0-4.97-4.03-9-9-9zm0 16c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm5-11h-3V4h-2v3H7V4H5v3H2v2h16V7z" />
+                            <circle cx="12" cy="8" r="1" fill="currentColor" />
+                            <path d="M9 14h6" stroke="currentColor" stroke-width="1.5" />
+                            <path d="M9 16h6" stroke="currentColor" stroke-width="1.5" />
+                        </svg>
+                    </span>
+                    <h3> MEDISCAN AI</h3>
+                    <!-- <p>HERE I WILL PUT DESCRIPTION OF THE SYMPTOM CHECKER</p> -->
+                    <div class="shine"></div>
+                    <div class="background">
+                        <div class="tiles">
+                            <div class="tile tile-1"></div>
+                            <div class="tile tile-2"></div>
+                            <div class="tile tile-3"></div>
+                            <div class="tile tile-4"></div>
+                            <div class="tile tile-5"></div>
+                            <div class="tile tile-6"></div>
+                            <div class="tile tile-7"></div>
+                            <div class="tile tile-8"></div>
+                            <div class="tile tile-9"></div>
+                            <div class="tile tile-10"></div>
+                        </div>
+                        <div class="line line-1"></div>
+                        <div class="line line-2"></div>
+                        <div class="line line-3"></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <span class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="6" y="3" width="12" height="18" rx="2" ry="2" />
+                            <path d="M10 21h4" />
+                            <circle cx="12" cy="20" r="0.5" />
+                        </svg>
+                    </span>
+                    <h3>SCAN THE PRESCRIPTION</h3>
+                    <p>Medisana is a comprehensive website that helps you learn about medicine.</p>
+                    <div class="shine"></div>
+                    <div class="background">
+                        <div class="tiles">
+                            <div class="tile tile-1"></div>
+                            <div class="tile tile-2"></div>
+                            <div class="tile tile-3"></div>
+                            <div class="tile tile-4"></div>
+                            <div class="tile tile-5"></div>
+                            <div class="tile tile-6"></div>
+                            <div class="tile tile-7"></div>
+                            <div class="tile tile-8"></div>
+                            <div class="tile tile-9"></div>
+                            <div class="tile tile-10"></div>
+                        </div>
+                        <div class="line line-1"></div>
+                        <div class="line line-2"></div>
+                        <div class="line line-3"></div>
+                    </div>
+                </div>
+                <div class="card">
+                    <span class="icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" transform="rotate(90 12 12)">
+                            <path d="M12 3C8.686 3 6 5.686 6 9v6c0 3.314 2.686 6 6 6s6-2.686 6-6V9c0-3.314-2.686-6-6-6z" />
+                            <path d="M12 9v6" />
+                            <path d="M9 12h6" />
+                        </svg>
+                    </span>
+                    <h3>PILL REMINDER</h3>
+                    <p>Medicine reminder according to the prescription</p>
+                    <div class="shine"></div>
+                    <div class="background">
+                        <div class="tiles">
+                            <div class="tile tile-1"></div>
+                            <div class="tile tile-2"></div>
+                            <div class="tile tile-3"></div>
+                            <div class="tile tile-4"></div>
+                            <div class="tile tile-5"></div>
+                            <div class="tile tile-6"></div>
+                            <div class="tile tile-7"></div>
+                            <div class="tile tile-8"></div>
+                            <div class="tile tile-9"></div>
+                            <div class="tile tile-10"></div>
+                        </div>
+                        <div class="line line-1"></div>
+                        <div class="line line-2"></div>
+                        <div class="line line-3"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="vision">
+            <h2>Our Vision</h2>
+            <p>MEDISANA</p>
+            <h3 style="
+  font-size: calc(1.2rem + 1vmin);
+  color: var(--website-color);
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  transition: color 0.3s, text-shadow 0.3s;
+  cursor: pointer;"
+  onmouseover="this.style.color='var(--secondary-color)'; this.style.textShadow='2px 2px 4px rgba(0, 0, 0, 0.3)';"
+  onmouseout="this.style.color='var(--website-color)'; this.style.textShadow='1px 1px 2px rgba(0, 0, 0, 0.2)';"
+>
+</h3>
+
+  <p>Our vision is to revolutionize healthcare by empowering individuals to take control of their health 
+    and well-bring by providing an intuitive ,all-in-one platform that simplifies the healthcare experience. We strive to bridge the gap between patients, healthcare providers, and ensuring that every person has access to timely medical care, relevant health insights, seamless medication management. By leveraging advanced technology, we aim to enhance patient outcomes, promote, proactive health monitoring, and create a world where managing health is effortless,
+     informed, and accessible for everyone everywhere, anytime, anywhere.</p>
+</p>
+
+        </div>
+        <div class="section" id="team">
+            <h2>Our Team</h2>
+            <div class="responsive-container-block outer-container">
+                <div class="responsive-container-block inner-container">
+                  <p class="text-blk section-head-text">
+                    Meet Our Team
+                  </p>
+                  <p class="text-blk section-subhead-text">
+                KASRP-M
+                  </p>
+                  <div class="responsive-container-block">
+                    <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+                      <div class="team-card">
+                        <div class="img-wrapper">
+                          <img class="team-img" src="kartik.jpeg">
+                        </div>
+                        <p class="text-blk name">
+                          KARTIK PANT
+                        </p>
+                        <p class="text-blk position">
+                          FULL STACK WEB DEVELOPER
+                        </p>
+                        <div class="social-media-links">
+                          <a href="http://www.twitter.com/" target="_blank">
+                            <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+                          </a>
+                          <a href="https://www.linkedin.com/in/kartik-pant-7936a8357/" target="_blank">
+                            <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg" alt="LinkedIn">
+                          </a>
+                          <a href="http://www.instagram.com/" target="_blank">
+                            <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+                          </a>
+                          <a href="http://www.gmail.com/" target="_blank">
+                            <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+                      <div class="team-card">
+                        <div class="img-wrapper">
+                          <img class="team-img" src="aaravimage.jpg">
+                        </div>
+                        <p class="text-blk name">
+                          AARAV RAJ
+                        </p>
+                        <p class="text-blk position">
+                          AI TRAINING AND MODELLING
+                        </p>
+                        <div class="social-media-links">
+                          <a href="http://www.twitter.com/" target="_blank">
+                            <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+                          </a>
+                          <a href="http://www.facebook.com/" target="_blank">
+                            <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+                          </a>
+                          <a href="http://www.instagram.com/" target="_blank">
+                            <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+                          </a>
+                          <a href="http://www.gmail.com/" target="_blank">
+                            <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+                      <div class="team-card">
+                        <div class="img-wrapper">
+                          <img class="team-img" src="pratyush.jpg">
+                        </div>
+                        <p class="text-blk name">
+                            PRATYUSH BAMETA
+                        </p>
+                        <p class="text-blk position">
+                        DATABSE MANAGEMENT,UI/UX
+                        </p>
+                        <div class="social-media-links">
+                          <a href="http://www.twitter.com/" target="_blank">
+                            <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+                          </a>
+                          <a href="http://www.facebook.com/" target="_blank">
+                            <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+                          </a>
+                          <a href="http://www.instagram.com/" target="_blank">
+                            <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+                          </a>
+                          <a href="http://www.gmail.com/" target="_blank">
+                            <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+                      <div class="team-card">
+                        <div class="img-wrapper">
+                          <img class="team-img" src="skiddy.image.jpg">
+                        </div>
+                        <p class="text-blk name">
+                          BUT SAMUEL AGOT BUT
+                        </p>
+                        <p class="text-blk position">
+                          PPT
+                        </p>
+                        <div class="social-media-links">
+                          <a href="http://www.twitter.com/" target="_blank">
+                            <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+                          </a>
+                          <a href="http://www.facebook.com/" target="_blank">
+                            <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+                          </a>
+                          <a href="http://www.instagram.com/" target="_blank">
+                            <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+                          </a>
+                          <a href="http://www.gmail.com/" target="_blank">
+                            <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+                          </a>
+                        </div>
+                        <!-- REEKELITSOE MOSA -->
+                        <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+                            <div class="team-card">
+                              <div class="img-wrapper">
+                                <img class="team-img" src="rexiamge.jpg">
+                              </div>
+                              <p class="text-blk name">
+                                REEKELITSOE MOSA
+                              </p>
+                              <p class="text-blk position">
+                                DESIGNING 
+                              </p>
+                              <div class="social-media-links">
+                                <a href="http://www.twitter.com/" target="_blank">
+                                  <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg">
+                                </a>
+                                <a href="http://www.facebook.com/" target="_blank">
+                                  <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg">
+                                </a>
+                                <a href="http://www.instagram.com/" target="_blank">
+                                  <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg">
+                                </a>
+                                <a href="http://www.gmail.com/" target="_blank">
+                                  <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg">
+                                </a>
+                              </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <!-- contact us -->
+        <div class="arch_contact_us_duplicate">
+            <div class="responsive-container-block big-container">
+              <div class="responsive-container-block container">
+                <div class="responsive-cell-block wk-mobile-12 wk-desk-5 wk-tab-10 wk-ipadp-5" id="ih6s">
+                  <p class="text-blk section-head">
+                    Get in touch with us
+                    </p>
+                  <p class="text-blk section-subhead">
+                    We would love to hear from you. Please fill out the form below and we will get back to you as soon as possible.
+                    
+                  </p>
+                  
+                </div>
+                <div class="responsive-cell-block wk-ipadp-6 wk-mobile-12 wk-desk-5 wk-tab-9" id="i6df">
+                  <div class="form-wrapper">
+                    <input class="input input-element" name="Name" placeholder="Name">
+                    <input class="input input-element" name="Contact Number" placeholder="Contact Number">
+                    <input class="input input-element" name="Email" placeholder="Email">
+                    <textarea class="textinput input-element" placeholder="Message"></textarea>
+                    <button class="button">
+                      Send
+                    </button>
+                  </div>
+                  <div class="social-media-icon-container">
+                    <div class="icon-block social-icon">
+                      <svg height="37.7" id="ihxs6" viewBox="0 0 37.701 37.7" width="37.701" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M32.178,0H5.523A5.529,5.529,0,0,0,0,5.522V32.178A5.529,5.529,0,0,0,5.523,37.7H16.641V24.372H12.223V17.746h4.418V13.254a6.634,6.634,0,0,1,6.627-6.627h6.7v6.627h-6.7v4.492h6.7l-1.1,6.627h-5.6V37.7h8.91A5.529,5.529,0,0,0,37.7,32.178V5.522A5.529,5.529,0,0,0,32.178,0Zm0,0">
+                        </path>
+                      </svg>
+                    </div>
+                    <div class="icon-block social-icon">
+                      <svg height="37.7" id="inclm" viewBox="0 0 37.701 37.7" width="37.701" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M37.587,11.078A13.839,13.839,0,0,0,36.711,6.5a9.238,9.238,0,0,0-2.174-3.339A9.241,9.241,0,0,0,31.2.989,13.837,13.837,0,0,0,26.622.114C24.612.022,23.969,0,18.85,0s-5.762.022-7.772.113A13.841,13.841,0,0,0,6.5.99,9.239,9.239,0,0,0,3.164,3.164,9.24,9.24,0,0,0,.989,6.5a13.838,13.838,0,0,0-.875,4.576C.022,13.088,0,13.73,0,18.85s.022,5.762.114,7.772A13.835,13.835,0,0,0,.99,31.2a9.237,9.237,0,0,0,2.174,3.339A9.236,9.236,0,0,0,6.5,36.71a13.832,13.832,0,0,0,4.576.876c2.011.092,2.653.113,7.772.113s5.762-.022,7.772-.113A13.834,13.834,0,0,0,31.2,36.71,9.637,9.637,0,0,0,36.711,31.2a13.834,13.834,0,0,0,.876-4.576c.091-2.011.113-2.653.113-7.772s-.022-5.761-.113-7.772ZM34.194,26.467a10.429,10.429,0,1,0,9.68,9.68A9.68,9.68,0,0,0,34.194,26.467Zm0,15.963a6.283,6.283,0,1,1,6.284-6.284A6.283,6.283,0,0,1,34.194,40.5Zm0,0" transform="translate(0 0)">
+                        </path>
+                        <path d="M134.219,124.539a9.68,9.68,0,1,0,9.68,9.68A9.68,9.68,0,0,0,134.219,124.539Zm0,15.963a6.283,6.283,0,1,1,6.284-6.284A6.283,6.283,0,0,1,134.219,140.5Zm0,0" transform="translate(-115.369 -115.369)">
+                        </path>
+                        <path d="M366.454,90.888a2.262,2.262,0,1,1-2.262-2.262A2.262,2.262,0,0,1,366.454,90.888Zm0,0" transform="translate(-335.279 -82.1)">
+                        </path>
+                      </svg>
+                    </div>
+                    <div class="icon-block social-icon">
+                      <svg height="33.932" id="ijipc" viewBox="0 0 41.754 33.932" width="41.754" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M66.857,38.045a17.092,17.092,0,0,1-4.92,1.347A8.589,8.589,0,0,0,65.7,34.654a17.149,17.149,0,0,1-5.44,2.078,8.573,8.573,0,0,0-14.6,7.814A24.317,24.317,0,0,1,28.009,35.6,8.575,8.575,0,0,0,30.66,47.032a8.506,8.506,0,0,1-3.88-1.073c0,.036,0,.073,0,.109a8.571,8.571,0,0,0,6.872,8.4,8.6,8.6,0,0,1-3.868.148,8.575,8.575,0,0,0,8,5.949A17.293,17.293,0,0,1,25.1,64.111a24.231,24.231,0,0,0,13.13,3.849c15.756,0,24.373-13.053,24.373-24.373,0-.371-.025-.741-.025-1.108a17.371,17.371,0,0,0,4.275-4.434Z" transform="translate(-25.103 -34.028)">
+                        </path>
+                      </svg>
+                    </div>
+                    <div class="icon-block social-icon">
+                      <svg height="37.649" id="ij4qf" viewBox="0 0 39.398 37.649" width="39.398" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M66.466,47.05V61.618H58.02V48.026c0-3.413-1.219-5.743-4.278-5.743a4.62,4.62,0,0,0-4.332,3.088,5.781,5.781,0,0,0-.28,2.058V61.617H40.684s.113-23.02,0-25.4h8.447v3.6c-.017.028-.041.056-.056.083h.056v-.083a8.386,8.386,0,0,1,7.612-4.2c5.557,0,9.723,3.631,9.723,11.432ZM31.848,23.969c-2.889,0-4.78,1.9-4.78,4.388a4.374,4.374,0,0,0,4.669,4.39h.055c2.946,0,4.778-1.951,4.778-4.39a4.388,4.388,0,0,0-4.722-4.388ZM27.57,61.618h8.444v-25.4H27.57Z" transform="translate(-27.068 -23.969)">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="footer">
+            <p>&copy; 2025 Medisana. All rights reserved.</p>
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
